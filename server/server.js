@@ -6,6 +6,7 @@ const cors = require("cors");
 const path = require('path');
 
 const userRoutes = require('./routes/userRoutes');
+const customerRoutes = require('./routes/customerRoutes');
 
 dotenv.config();
 
@@ -29,6 +30,7 @@ app.use(
 
 // Define Routes
 app.use('/api/users', userRoutes);
+app.use('/api/customer', customerRoutes);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {

@@ -51,7 +51,6 @@ const registerUser = async (req, res) => {
 // Public access
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
-    console.log(req.user);
 
     try {
         // check if user exists
